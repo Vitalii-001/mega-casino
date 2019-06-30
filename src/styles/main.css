@@ -1,0 +1,12 @@
+#adminUI, #playerUI {
+  display: none;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.buttons-frame {
+  display: flex;
+  justify-content: space-between;
+}

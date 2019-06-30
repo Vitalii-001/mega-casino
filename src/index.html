@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Casino</title>
+    <script src="dist/index_bundle.js"></script>
+  </head>
+  <body>
+
+    <dialog id="loginAppDialog">
+      <h3>Enter as:</h3>
+      <div>
+        <button id="admin">Admin</button>
+        <button id="player">Player</button>
+      </div>
+    </dialog>
+
+    <div id="adminUI">
+      <button id="createCasino">Create a casino</button>
+      <!--<table>-->
+        <!--<thead>-->
+          <!--<th>Id</th>-->
+          <!--<th>Name</th>-->
+          <!--<th>Machines</th>-->
+          <!--<th>Players</th>-->
+          <!--<th>Cash</th>-->
+        <!--</thead>-->
+      <!--</table>-->
+    </div>
+    <div id="playerUI"></div>
+
+
+    <dialog id="createCasinoDialog">
+      <h3>Create a casino</h3>
+      <form id="createCasinoForm">
+        <label for="casinoName">Name
+          <input name="name" id="casinoName" type="text">
+        </label>
+      </form>
+      <div class="buttons-frame">
+        <button id="confirmCreation">Create</button>
+        <button id="cancelCreation">Cancel</button>
+      </div>
+    </dialog>
+  </body>
+</html>
