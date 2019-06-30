@@ -1,2 +1,3 @@
-export const adminBtnEl = document.getElementById('admin');
-export const adminUI = document.getElementById('adminUI');
+export const loginBtnEl = document.getElementById('loginButton');
+export const adminUIEl = document.getElementById('adminUI');
+export const loginFormEl = document.getElementById('loginForm');

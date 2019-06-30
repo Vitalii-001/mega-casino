@@ -10,8 +10,15 @@
     <dialog id="loginAppDialog">
       <h3>Enter as:</h3>
       <div>
-        <button id="admin">Admin</button>
-        <button id="player">Player</button>
+        <form id="loginForm">
+          <label for="userName">Enter your name
+            <input type="text" id="userName" name="userName" />
+          </label>
+          <label for="isAdmin">Enter as admin?
+            <input type="checkbox" id="isAdmin" name="isAdmin">
+          </label>
+        </form>
+        <button id="loginButton">Login</button>
       </div>
     </dialog>
 
@@ -27,7 +34,9 @@
         <!--</thead>-->
       <!--</table>-->
     </div>
-    <div id="playerUI"></div>
+    <div id="playerUI">
+
+    </div>
 
 
     <dialog id="createCasinoDialog">

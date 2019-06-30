@@ -1,27 +1,23 @@
+import { formSerialize } from '../../shared/utils/utils';
+
 const loginAppDialogEl = document.getElementById('loginAppDialog');
-import {adminBtnEl, adminUI} from '../../shared/ui-elements/admin-ui.elements';
-import {playerBtnEl, playerUI} from '../../shared/ui-elements/player-ui.elements';
+import {loginBtnEl, loginFormEl, adminUIEl} from '../../shared/ui-elements/admin-ui.elements';
+import {playerUIEl} from '../../shared/ui-elements/player-ui.elements';
+import { UserModel } from './user/models/user.model';
 
 
 const login = () => {
-  const selectedRole = (role) => {
-    switch (role) {
-      case 'admin':
-        adminUI.style.display = 'block';
-        break;
-      case 'player':
-        playerUI.style.display = 'block';
-        break;
-    }
+  const showUIAccordingRole = (isAdmin) => {
+    isAdmin ? adminUIEl.style.display = 'block' : playerUIEl.style.display = 'block';
     loginAppDialogEl.close();
   };
 
-  adminBtnEl.addEventListener('click', () => {
-    selectedRole('admin');
-  });
-
-  playerBtnEl.addEventListener('click', () => {
-    selectedRole('player');
+  loginBtnEl.addEventListener('click', () => {
+    const getUserFormData = formSerialize(loginFormEl);
+    getUserFormData.startCash = 1000000;
+    const loggedUser = new UserModel(getUserFormData);
+    console.log(loggedUser)
+    showUIAccordingRole(getUserFormData.isAdmin);
   });
 };
 
